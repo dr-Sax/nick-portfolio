@@ -32,7 +32,7 @@ class Header extends HTMLElement {
                 <div class="remote-button"></div>
               </div>
             </a>
-            <a href="/experience.html" class="remote-link">
+            <a href="/community.html" class="remote-link">
               <div class="remote-button-group">
                 <p>Community Engagement</p>
                 <div class="remote-button"></div>
@@ -41,7 +41,7 @@ class Header extends HTMLElement {
           </div>
 
           <div class="remote-button-row">
-            <a href="/experience.html" class="remote-link">
+            <a href="/essays.html" class="remote-link">
               <div class="remote-button-group">
                 <p>Essays</p>
                 <div class="remote-button"></div>

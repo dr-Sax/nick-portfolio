@@ -329,6 +329,39 @@ a:active{
    max-height: 200px;
 }
 
+.info-card.project img{
+    width: 100px;
+    max-height: 300px;
+}
+
+.info-card.essay{
+    padding: 20px;
+}
+
+.info-card.essay .info-card-text{
+    flex: 2;
+    margin-right: 20px;
+}
+.info-card.essay button{
+    flex: 1;
+    margin: 60px;
+    cursor: pointer;
+    font-family: "Montserrat";
+    background-color: #69A1CF;
+}
+
+.info-card.essay button:hover{
+    cursor: pointer;
+    background-color: #E2B2EF;
+}
+
+
+.info-card.essay button:active{
+    cursor: pointer;
+    background-color: #b53cd7;
+}
+
+
 
 
 /*INFO LINE COMPONENT*/
