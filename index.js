@@ -1,4 +1,4 @@
-const remote_icon = document.getElementById('remote');
+const remote_icon = document.getElementById('remote-div');
 const remote_control = document.getElementById('remote-dropdown');
 
 remote_icon.addEventListener('click', () => {

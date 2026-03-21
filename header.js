@@ -10,8 +10,8 @@ class Header extends HTMLElement {
     this.innerHTML = `
         <header class="flex">
         <h1><a href="index.html">Nicolas Romano</a></h1>
-        <div>
-            <img src="assets/images/remote.png" id="remote">
+        <div id="remote-div">
+            
             
         </div>
         </header>
