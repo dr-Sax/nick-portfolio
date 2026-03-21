@@ -17,7 +17,7 @@ class Header extends HTMLElement {
         </header>
         <div id="remote-dropdown" style="display: none;" class="flex-col">
           <div id="remote-screen">
-            <h2>Home</h2>
+            <h2 id="screen-name">Home</h2>
           </div>
           <div class="remote-button-row">
             <a href="/experience.html" class="remote-link">
@@ -32,21 +32,25 @@ class Header extends HTMLElement {
                 <div class="remote-button"></div>
               </div>
             </a>
-            <a href="/community.html" class="remote-link">
+            
+          </div>
+
+          <div class="remote-button-row">
+          <a href="/community.html" class="remote-link">
               <div class="remote-button-group">
                 <p>Community Engagement</p>
                 <div class="remote-button"></div>
               </div>
             </a> 
-          </div>
-
-          <div class="remote-button-row">
             <a href="/essays.html" class="remote-link">
               <div class="remote-button-group">
                 <p>Essays</p>
                 <div class="remote-button"></div>
               </div>
             </a>
+          </div>
+
+          <div class="remote-button-row">
             <a href="/projects.html" class="remote-link">
               <div class="remote-button-group">
                 <p>Resume</p>
@@ -61,7 +65,7 @@ class Header extends HTMLElement {
             </a> 
           </div>
 
-          
+        
           
         </div>
         

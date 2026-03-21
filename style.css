@@ -65,6 +65,10 @@ p{
     color:#2D3750;
 }
 
+figcaption{
+    font-family: Steps-Thin, "Montserrat", sans-serif;
+}
+
 iframe{
     margin: 20px;
 }
@@ -148,9 +152,10 @@ header{
     right: 25px;
     top: 100px;
     background-color: #69A1CF;
+    background: linear-gradient(#4e83ae, #69A1CF, #215885);
     box-shadow: #000 0 0 10px;
-    height: 500px;
-    width: 300px;
+    height: 600px;
+    width: 350px;
     border-radius: 25px;
     z-index: 3;
     display: none;
@@ -159,7 +164,7 @@ header{
 
 #remote-dropdown p{
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 
 #remote-screen{
@@ -193,12 +198,14 @@ header{
     /* border: 2px solid yellow; */
 }
 
+
+
 .remote-link p{
     font-size: 0.75rem;
 }
 
 .remote-link:hover p{
-    color: #E2B2EF;
+    color: #0d1834;
 }
 
 .remote-link:active p{
@@ -207,7 +214,7 @@ header{
 
 
 .remote-link:hover .remote-button{
-    background-color: #E2B2EF;
+    background-color: #0d1834;
 }
 
 .remote-link:active .remote-button{
@@ -218,10 +225,17 @@ header{
 
 .remote-button{
     background-color: #2D3750;
-    width: 50px;
+    width: 80px;
     height: 20px;
+    border: 1px solid #535c72;
+    border-radius: 5px;
     box-shadow: #2D3750 2px 2px 4px;
     /* margin-top: -20px; */
+}
+
+
+.long-button{
+    width: 200px;
 }
 
 
@@ -422,6 +436,8 @@ a:active{
 
 .side-by-side{
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .photo-row{
