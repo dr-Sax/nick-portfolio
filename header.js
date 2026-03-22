@@ -51,13 +51,13 @@ class Header extends HTMLElement {
           </div>
 
           <div class="remote-button-row">
-            <a href="/projects.html" class="remote-link">
+            <a href="/resume.html" class="remote-link">
               <div class="remote-button-group">
                 <p>Resume</p>
                 <div class="remote-button"></div>
               </div>
             </a>
-            <a href="/experience.html" class="remote-link">
+            <a href="/contact.html" class="remote-link">
               <div class="remote-button-group">
                 <p>Contact</p>
                 <div class="remote-button"></div>
