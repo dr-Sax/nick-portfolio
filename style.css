@@ -489,6 +489,7 @@ a:active{
 
 li{
     list-style: none;
+    margin: 0 auto;
 }
 ul{
     margin: 50px auto;
@@ -511,7 +512,13 @@ ul{
 
     .info-line{
         width: 95%;
-        padding: 10px;
+        padding: 20px;
+    }
+    .info-line .row-to-col{
+        align-items: flex-start;
+    }
+    .info-line .row-to-col *{
+        text-align: left;
     }
 
     .index main{
@@ -553,8 +560,14 @@ ul{
 .info-line .row-to-col h4, .info-line .row-to-col p{
     margin-top: 5px;
     margin-bottom: 5px;
+    
 }
 
+.project-page p{
+
+    width: 95%;
+
+}
 
 
     
