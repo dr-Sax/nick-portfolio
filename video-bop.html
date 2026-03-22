@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nicolas Romano</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header-component></header-component>
+    <main class="project-page">
+      <div class="flex-col centered">
+        <h2>Video Bop</h2>
+        <h3>April 2024 - May 2024</h3>
+        <iframe src="https://player.vimeo.com/video/1018985251?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="mobile_app"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+
+        <p>As a new media artist, I tried to create a media system which would engage the audience in this creative process of translating abstract ideas of one form into another. I believe this practice can help externalize the mental processes of rapid free association. To do so, I had to build a web-application accessible to the audience connected to a cloud database which could be queried from my PC running the Isadora media software. This web-app could handle the requests of multiple users from their phones or other smart-devices with internet access. I used a framework familiar to me using Dash to code the dynamic website, Heroku to host the public server, and AstraDB to store and recall audience generated data.</p>
+        <p>The experience stared with the audience scanning a QR code to access the website, effectively tuning their phones into an interactive control surface. Next, they were instructed to read Kerouac’s Essentials of Spontaneous Prose which humorously served as the ‘rules’ for the experience. This was more of a mood setting device to frame the audience to think about creativity from this spontaneous image oriented angle.</p>
+        <h2>History of Bop</h2>
+        <iframe src="https://player.vimeo.com/video/1018985439?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"  title="hob"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+        <p>One artistic technique embodied by the beats and inspired from jazz is what Kerouac calls 'spontaneous prose'. Jazz musicians exceled at this rapid invention of musical structures through heightened sonic sensibility and borderline phantasmal prostheses of an instrument to their nervous systems and soul for that matter. The beats took up this approach with the technology of their time; namely the typewriter. Kerouac even made a manifesto called ESSENTIALS OF SPONTANEOUS PROSE in which he describes the procedure of writing as ‘the essence in the purity of speech, sketching language is undisturbed flow from the mind of personal secret idea-words, blowing (as per jazz musician) on subject of image.
+</p><p>
+I set out to visualize the final section of history of bop. I’ve listened to this poem recited countless times and did a lyrical transcription – meaning I listened to the recording and wrote out all of its words. This is a common practice among jazz musicians and writers since as it helps internalize language. Next, I followed Dmytro Nikolaiev’s implementation of a Vosk LLM in Python to convert the audio file into a transcribed text JSON file which contained the words and their position in time as spoken.
+</p><p>
+Not all the words were accurately transcribed so I had to manually correct as AI models are good but not nuanced enough to decipher all spoken phrases especially from an unconventional speaker like Kerouac. Further, I did some post-processing of the data to get it in a form which would play nicely with Isadora’s JSON parser actor. The format involved Key-Value pairs of timestamps and words spoken. Through experimentation, I found that repeating each word in the JSON list near the millisecond (ms) frequency ensured that it would appear onscreen and remain illuminated consistently as the corresponding audio is spoken. I found that although the resolution of the timecode variable of the movie player actor was at the ms scale, it didn’t increment consistently enough to predict the values it would trigger. Consequently, having a large and widespread array of timestamps between the start and end of a word ensures that it will be triggered. Additionally, Isadora plays in the realm of percentages between 0 and 100 rather than the typical format of videos being in time duration. So I had to account for a conversion of timestamp as percent completed with respect to the total length of the audio clip.
+</p><p>
+The next stage in the process was to find imagery representing the ideas that Kerouac is expressing. Following Kerouac’s ‘Setup’ step: ‘The object is set before the mind, either in reality. as in sketching (before a landscape or teacup or old face) or is set in the memory wherein it becomes the sketching from memory of a definite image-object.’, I used Kerouac’s speaking of the words to serve as the stimulus (object) for mental imagery. Once an image or set of ideas was established in mind through free-association (‘mental image blowing’), I would search Youtube to find a clip which best represented this mental image. Instead of using one of the many available and ad-prone sites for converting Youtube videos to .mp4 files, I adapted a Python script using the yt-dlp/yt-dlp library to do so with better speed and precision. This allowed me to quickly find sections of videos, copy their video url along with start / end time into a function which would download the video file with a specific name to a designated folder. This method allows more mental energy to be concentrated on thinking of images and finding existing internet representations rather than downloading and cutting the video segments. In this way a quick flow can be achieved, better mimicking Kerouac’s spontaneous prose method. To add, just as writing is a negotiation between image thoughts and the language available to one’s tongue and fingers at that moment, video-bop (new term for this method) is a negotiation between a visualized animation and the medium of available images / videos online. This medium includes not only the content available and the form they take, but also the algorithmic recommender process personalized by the user’s previous internet activity. For in this intentionally fast paced creative process, one relies heavily on differentiating search terms to approach on an appropriate visualization.
+      </p>
+    <h2>Isadora VJ Jam</h2>
+    <iframe src="https://player.vimeo.com/video/1018985489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="jam"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+    <p>Most important was the realization that interactivity and aesthetic reception is fostered better from play as opposed to rigid-timebound playback. The first 2 iterations of video-bop utilized audio-to-text timestamping technologies which were great at enabling programmed multimedia events to occur in time with a pre-recorded audio file. However, after attending a poetry night at Columbus’s Kafe Kerouac, the environment where poets read their own material and performed it live inspired me to remove the timebound nature of the media system and force the audience to write their own haikus as opposed to existing ones.</p>
+    <p>Most of the technical coding effort was spent on the smart-device web-app controller to make it more robust and ensure no user actions could break the system. I included better feedback mechanisms to let the users know that they completed steps correctly to submit media for their video-bop. Further, I made use of a google-images-download to allow users to pull media from google images as opposed to just Youtube which was an audience suggestion from cycle 2.</p>
+    <p>One challenge that I have yet to tackle, was the movement of media files as downloaded from a python script on my PC into the Isadora media software environment. During the performance, this was a manual step as I ran the script and dragged the files into Isadora and reformatted the haiku text file path. See the video-bop process here:</p>
+    
+      <h2>Beat x Jung Jam</h2>
+      <iframe src="https://player.vimeo.com/video/1018985906?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="jung"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+      
+    </main>
+    <script src="header.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
