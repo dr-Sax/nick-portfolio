@@ -93,12 +93,13 @@ iframe{
 
 iframe.vertical{
     aspect-ratio: 9/16;
+    height: 600px;
 }
 
 main{
     width: 100%;
     min-width: 320px;
-    margin: 0 auto;
+    margin: 0 auto 70px auto;
     /* border: 2px solid red; */
 }
 
@@ -545,17 +546,8 @@ main.project-page {
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
-}
-
-li{
-    list-style: none;
-    margin: 0 auto;
     text-align: center;
-}
-ul{
-    margin: 50px auto;
-    text-decoration: none;
-    list-style: none;
+    margin: 40px 0 20px;
 }
 
 
@@ -586,7 +578,7 @@ embed{
     }
 
     .dots{
-
+        position: sticky;
         top: 50px;
 
     }
@@ -623,7 +615,7 @@ embed{
 
     #green-spark{
         height: 200px;
-        top: 750px;
+        top: 720px;
     }
     #blue-spark{
         height: 100px;
@@ -647,10 +639,10 @@ embed{
     
     }
 
-    .info-card .row-to-col h2, .info-card .row-to-col h3,
-    .info-card .row-to-col h4, .info-card .row-to-col p,
-    .info-line .row-to-col h2, .info-line .row-to-col h3,
-    .info-line .row-to-col h4, .info-line .row-to-col p{
+    .info-card.row-to-col h2, .info-card.row-to-col h3,
+    .info-card.row-to-col h4, .info-card.row-to-col p,
+    .info-line.row-to-col h2, .info-line.row-to-col h3,
+    .info-line.row-to-col h4, .info-line.row-to-col p{
         margin-top: 5px;
         margin-bottom: 5px;
         
@@ -672,7 +664,6 @@ embed{
     .dots{
         position: sticky;
         top: 70px;
-        padding: 0 0.5rem;
         height: 30px;
     }
 }
