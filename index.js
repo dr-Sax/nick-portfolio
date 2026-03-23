@@ -10,3 +10,13 @@ remote_icon.addEventListener('click', () => {
     }
         
 });
+
+const remote_screen = document.getElementById('remote-screen');
+
+remote_screen.addEventListener('click', () => {
+    window.location.href = "/techno-juggling.html";
+        
+});
+
+
+

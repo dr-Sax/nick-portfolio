@@ -17,7 +17,7 @@ class Header extends HTMLElement {
         </header>
         <div id="remote-dropdown" style="display: none;" class="flex-col">
           <div id="remote-screen">
-            <h2 id="screen-name">Home</h2>
+            <h2 id="screen-name">Latest Project</h2>
           </div>
           <div class="remote-button-row">
             <a href="/experience.html" class="remote-link">

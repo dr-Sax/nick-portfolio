@@ -26,6 +26,7 @@ html{
     padding: 0;
     font-size: 16px;
     background-color: #2D3750;
+    overflow-x: hidden;
 }
 
 h1{
@@ -36,26 +37,26 @@ h1{
 }
 
 h2 {
-  font-family: Steps; 
+  font-family: Steps, "Montserrat", Arial, Helvetica, sans-serif; 
   font-size: 2rem;
   color: #6EEF6E;
 }
 
 h3 {
-  font-family: Steps; 
+  font-family: Steps, "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #2D3750;
 }
 
 h4 {
-  font-family: Steps; 
+  font-family: Steps, "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   color: #2D3750;
 }
 
 .index p, #remote-dropdown p{
     font-size: 1.5rem;
-    font-family: Steps;
+    font-family: Steps, "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 p{
@@ -67,6 +68,9 @@ p{
     color:#2D3750;
 }
 
+.wide-img{
+    width: 100%;
+}
 
 
 figcaption{
@@ -75,19 +79,25 @@ figcaption{
 
 figure img{
     max-width: 400px;
+
 }
 
 iframe{
-    margin: 20px;
+    display: block;
+    margin: 10px auto;
     width: 60%;
-    min-width: 350px;
+    min-width: 320px;
     aspect-ratio: 16/9;
 
 }
 
+iframe.vertical{
+    aspect-ratio: 9/16;
+}
+
 main{
-    width: 70%;
-    min-width: 380px;
+    width: 100%;
+    min-width: 320px;
     margin: 0 auto;
     border: 2px solid red;
 }
@@ -96,35 +106,41 @@ main h2{
     text-align: center;
 }
 
+
+
 /*BUTTON STYLES*/
 
 button{
-    background-color: #6EEF6E;
     font-size: 1.25rem;
     padding: 10px;
     border-radius: 5px;
+    font-family: "Montserrat", Arial, Arial, Helvetica, sans-serif;
+    background-color: #69A1CF;
+    margin: 20px;
 }
 
 button:hover{
+    cursor: pointer;
     background-color: #E2B2EF;
 }
 
 button:active{
+    cursor: pointer;  
     background-color: #b53cd7;
 }
 
-button:hover a{
+
+a:has(button) button:hover{
     color: #2D3750;
 }
 
-button a{
-    color: #2D3750;
-    font-family: "Montserrat";
+.info-card.essay button{
+    flex: 1;
+    margin: 60px;
 }
 
-main{
-    padding: 50px;
-}
+
+
 
 
 header{
@@ -177,7 +193,7 @@ header{
 
 #remote-dropdown{
     position: fixed;
-    right: 25px;
+    right: 20px;
     top: 100px;
     background-color: #69A1CF;
     background: linear-gradient(#4e83ae, #69A1CF, #215885);
@@ -202,6 +218,11 @@ header{
     align-items: center;
     text-align: center;
     margin: 0 auto;
+}
+
+#remote-screen:hover{
+    cursor: pointer;
+    background-color: #000;
 }
 
 .remote-button-row{
@@ -233,7 +254,7 @@ header{
 }
 
 .remote-link:hover p{
-    color: #0d1834;
+    color: #000000;
 }
 
 .remote-link:active p{
@@ -242,7 +263,7 @@ header{
 
 
 .remote-link:hover .remote-button{
-    background-color: #0d1834;
+    background-color: #000000;
 }
 
 .remote-link:active .remote-button{
@@ -330,6 +351,8 @@ a:active{
 
 /*HERO PAGE*/
 
+
+
 #hero{
     /* border: 2px solid green; */
     justify-content: space-evenly;
@@ -337,7 +360,7 @@ a:active{
 
 #hero *{
     width: 80%;
-    min-width: 300px;
+    min-width: 320px;
     align-self: center;
     justify-self: center;
     flex: 1;
@@ -347,13 +370,27 @@ a:active{
 
 #hero img{
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
+}
+
+#hero h2{
+    margin-top: 10px;
 }
 
 #profile{
-    min-width: 300px;
+    min-width: 320px;
     border-radius: 5px;
+    margin: 0 auto;
     box-shadow: #6EEF6E 0px 0px 20px;
+}
+
+#introduction{
+    text-align: center;
+}
+
+#introduction p{
+    text-align: left;
+
 }
 
 
@@ -410,35 +447,25 @@ a:active{
     flex: 2;
     margin-right: 20px;
 }
-.info-card.essay button{
-    flex: 1;
-    margin: 60px;
-    cursor: pointer;
-    font-family: "Montserrat";
-    background-color: #69A1CF;
+
+
+
+main.info-card-list {
+    width: 70%;
+    min-width: 320px;
 }
-
-.info-card.essay button:hover{
-    cursor: pointer;
-    background-color: #E2B2EF;
-}
-
-
-.info-card.essay button:active{
-    cursor: pointer;
-    background-color: #b53cd7;
-}
-
 
 
 
 /*INFO LINE COMPONENT*/
 .info-line{
     width: 100%;
+    /* height: 130px; */
     background-color: #f5f5f5;
     border-radius: 5px;
     align-content: left;
-    padding: 0 30px;
+    padding: 10px 30px;
+    margin-bottom: 20px;
     
     /* box-shadow: #6EEF6E 0px 0px 20px; */
     /* border: 4px solid #6EEF6E; */
@@ -456,34 +483,59 @@ a:active{
     text-align: left;
 }
 
+.project-page h2{
+    margin: 50px 0 0 0 ;
+}
+
+.project-page h2:first-of-type{
+    margin: 0;
+}
 
 .project-page h3, 
 .project-page h4{
     color: #f5f5f5;
 } 
 
-.project-page p{
-    font-family: "Montserrat";
-    color: #f5f5f5;
+main.project-page {
     width: 70%;
+    min-width: 320px;
+}
+
+.project-page *{
+    text-align: center;
+}
+
+.project-page p{
+    font-family: "Montserrat", Arial, Arial, Helvetica, sans-serif;
+    color: #f5f5f5;
+    /* width: 100%; */
+    text-align: justify;
     font-size: 1.25rem;
 }
 
 .side-by-side{
-    gap: 20px;
+    gap: 80px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.photo-row{
-    width: 70%;
-    gap: 10px;
+.side-by-side *{
+    flex: 1;
+    text-align: center;
 }
 
-.photo-row img{
-    width: 200px;
-    flex: 1;
+.side-by-side figure img{
+    max-width: 300px;
+}
+
+.side-by-side iframe.vertical{
+    max-width: 300px;
+}
+
+
+.side-by-side .flex-col{
+    align-items: center;
 }
 
 
@@ -491,7 +543,6 @@ a:active{
     font-family: "Montserrat", Arial, Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
-
 
 
 .contact a{
@@ -523,6 +574,30 @@ embed{
 
 /*MEDIA QUERIES*/
 
+
+
+
+
+@media screen and (max-width: 685px){
+
+    h1{
+    font-size: 1.5rem;
+    }
+
+    header{
+        position: sticky;
+        top: 0px;
+        height: 100%;
+    }
+
+    .dots{
+
+        top: 50px;
+
+    }
+}
+
+
 @media screen and (max-width: 600px){
     .row-to-col{
         flex-direction: column;
@@ -531,12 +606,12 @@ embed{
     }
 
     .info-card{
-        width: 95%;
+        /* width: 95%; */
         padding: 10px;
     }
 
     .info-line{
-        width: 95%;
+        /* width: 95%; */
         padding: 20px;
     }
     .info-line .row-to-col{
@@ -548,6 +623,7 @@ embed{
 
     .index main{
         width: 95%;
+
     }
 
     #green-spark{
@@ -570,27 +646,21 @@ embed{
     }
 
     
-
-
-#remote-dropdown{
-    top: 130px;
-   
-}
-
-.info-card .row-to-col h2, .info-card .row-to-col h3,
-.info-card .row-to-col h4, .info-card .row-to-col p,
-.info-line .row-to-col h2, .info-line .row-to-col h3,
-.info-line .row-to-col h4, .info-line .row-to-col p{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    #remote-dropdown{
+        top: 80px;
+        right: 15px;
     
-}
+    }
 
-.project-page p{
+    .info-card .row-to-col h2, .info-card .row-to-col h3,
+    .info-card .row-to-col h4, .info-card .row-to-col p,
+    .info-line .row-to-col h2, .info-line .row-to-col h3,
+    .info-line .row-to-col h4, .info-line .row-to-col p{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        
+    }
 
-    width: 95%;
-
-}
 
 
 
@@ -598,34 +668,14 @@ embed{
 }
 
 
-@media screen and (max-width: 685px){
 
-    h1{
-    font-size: 1.5rem;
-}
 
-header{
-    position: sticky;
-    top: 0px;
-    height: 100%;
-}
-
-.dots{
-    position: sticky;
-    top: 50px;
-    padding: 0 0.5rem;
-    height: 30px;
-}
-}
 
 @media screen and (max-width: 460px){
-
-
-.dots{
-    position: sticky;
-    top: 70px;
-    padding: 0 0.5rem;
-    height: 30px;
+    .dots{
+        position: sticky;
+        top: 70px;
+        padding: 0 0.5rem;
+        height: 30px;
+    }
 }
-}
-
