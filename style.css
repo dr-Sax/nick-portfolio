@@ -70,6 +70,7 @@ p{
 
 .wide-img{
     width: 100%;
+    max-width: 600px;
 }
 
 
@@ -107,6 +108,10 @@ main h2{
     text-align: center;
 }
 
+.vertical-img{
+    height: 500px;
+    width: 350px;
+}
 
 
 /*BUTTON STYLES*/
@@ -456,6 +461,10 @@ main.info-card-list {
 }
 
 
+.experience img{
+    padding: 40px;
+}
+
 
 /*INFO LINE COMPONENT*/
 .info-line{
@@ -504,8 +513,9 @@ main.project-page {
 .project-page p{
     font-family: "Montserrat", Arial, Arial, Helvetica, sans-serif;
     color: #f5f5f5;
-    /* width: 100%; */
-    text-align: justify;
+    width: 90%;
+    max-width: 900px;
+    text-align: left;
     font-size: 1.25rem;
 }
 
@@ -539,6 +549,8 @@ main.project-page {
     font-family: "Montserrat", Arial, Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
+
+
 
 
 .contact a{
@@ -594,8 +606,12 @@ embed{
 
     .info-card{
         /* width: 95%; */
-        padding: 10px;
+        padding: 20px;
     }
+
+    .experience img{
+    padding: 40px;
+}
 
     .info-line{
         /* width: 95%; */
