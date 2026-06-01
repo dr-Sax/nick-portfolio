@@ -44,7 +44,7 @@ class Header extends HTMLElement {
             </a> 
             <a href="/essays.html" class="remote-link">
               <div class="remote-button-group">
-                <p>Essays</p>
+                <p>Writings</p>
                 <div class="remote-button"></div>
               </div>
             </a>
