@@ -325,6 +325,7 @@ a:active{
 .flex-col{
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .space-between{
@@ -523,7 +524,7 @@ main.project-page {
     gap: 80px;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .side-by-side *{
